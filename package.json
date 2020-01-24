@@ -52,6 +52,7 @@
     ]
   },
   "dependencies": {
+    "cross-fetch": "^3.0.4",
     "ws": "^7.1.2"
   }
 }
