@@ -29,6 +29,7 @@
     "@types/mocha": "^5.2.7",
     "@types/node": "^12.7.12",
     "@types/sinon": "^7.5.0",
+    "@types/websocket": "^1.0.0",
     "@types/ws": "^6.0.3",
     "chai": "^4.2.0",
     "husky": "^3.0.9",
@@ -53,8 +54,8 @@
   },
   "dependencies": {
     "cross-fetch": "^3.0.4",
-    "isomorphic-ws": "^4.0.1",
     "querystring": "^0.2.0",
+    "websocket": "^1.0.31",
     "ws": "^7.1.2"
   }
 }

@@ -8,8 +8,6 @@ export * from "./forex";
 export * from "./stocks";
 export * from "./crypto";
 
-import Websocket from "isomorphic-ws";
-
 export interface IWebsocketClient {
   crypto: () => WebSocket;
   forex: () => WebSocket;
