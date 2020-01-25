@@ -8,7 +8,7 @@ import { IPolygonClient } from "./main.d";
 
 export const polygonClient = (apiKey: string): IPolygonClient => ({
   rest: restClient(apiKey),
-  websockers: websocketClient(apiKey)
+  websockets: websocketClient(apiKey)
 });
 
 export default polygonClient;
