@@ -58,6 +58,6 @@ export interface IForexClient {
   ) => Promise<IAggResponseFormatted>;
   snapshotAllTickers: () => Promise<IForexSnapshotAllTickersResponseFormatted>;
   snapshotGainersLosers: (
-    direction: string
+    direction?: string
   ) => Promise<IForexSnapshotAllTickersResponseFormatted>;
 }

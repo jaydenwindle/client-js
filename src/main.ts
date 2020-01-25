@@ -13,6 +13,10 @@ export * from "./rest/forex/index.d";
 export * from "./rest/stocks/index.d";
 export * from "./rest/reference/index.d";
 export * from "./websockets/index.d";
+export {
+  IAggResponseFormatted,
+  IAggregateQuery
+} from "./rest/stocks/aggregates";
 
 export interface IPolygonClient {
   rest: IRestClient;

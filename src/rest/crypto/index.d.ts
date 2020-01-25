@@ -47,14 +47,14 @@ export interface ICryptoClient {
     from: string,
     to: string,
     date: string,
-    query: IHistoricCryptoTradeQuery
+    query?: IHistoricCryptoTradeQuery
   ) => Promise<IHistoricCryptoTradeFormatted>;
   snapshotSingleTicker: (
     ticker: string
   ) => Promise<ICryptoSnapshotSingleTickerFormatted>;
   snapshotAllTickers: () => Promise<ICryptoSnapshotAllTickersFormatted>;
   snapshotGainersLosers: (
-    direction: string
+    direction?: string
   ) => Promise<ICryptoSnapshotAllTickersFormatted>;
   snapshotSingleTickerFullBook: (
     ticker: string

@@ -1,10 +1,7 @@
 import { auth } from "../transport/request";
 import { cryptoDailyOpenClose } from "./dailyOpenClose";
-import { cryptoExchanges, ICryptoExchanges } from "./cryptoExchanges";
-import {
-  lastTradeForCryptoPair,
-  ILastTradeForACryptoPair
-} from "./lastTradeForACryptoPair";
+import { cryptoExchanges } from "./cryptoExchanges";
+import { lastTradeForCryptoPair } from "./lastTradeForACryptoPair";
 import {
   cryptoSnapshotAllTickers,
   cryptoSnapshotGainersLosers,
@@ -16,17 +13,7 @@ import {
   cryptoGroupedDaily,
   cryptoPreviousClose
 } from "./aggregates";
-import {
-  historicCryptoTrades,
-  IHistoricCryptoTradeQuery,
-  IHistoricCryptoTradeFormatted
-} from "./historicCryptoTrades";
-
-import {
-  formatICryptoTickJsonRaw,
-  ICryptoDailyOpenCloseFormatted,
-  ICryptoDailyOpenCloseRaw
-} from "./ICryptoTickJson";
+import { historicCryptoTrades } from "./historicCryptoTrades";
 
 import { ICryptoClient } from "./index.d";
 

@@ -55,7 +55,7 @@ export {
 export { IAggregateQuery, IAggResponseFormatted } from "./aggregates";
 
 export interface IStocksClient {
-  conditionMappings: (ticktype: string) => Promise<IConditionMappings>;
+  conditionMappings: (ticktype?: string) => Promise<IConditionMappings>;
   dailyOpenClose: (symbol: string, date: string) => Promise<IDailyOpenClose>;
   exchanges: () => Promise<IExchangeFormatted[]>;
   lastQuoteForSymbol: (symbol: string) => Promise<ILastQuoteResult>;
@@ -85,7 +85,7 @@ export interface IStocksClient {
     ticker: string
   ) => Promise<ISnapshotSingleTickerResultFormatted>;
   snapshotGainersLosers: (
-    direction: string
+    direction?: string
   ) => Promise<ISnapshotGainersLosersResultFormatted>;
   previousClose: (
     ticker: string,
