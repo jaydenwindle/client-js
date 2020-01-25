@@ -1,6 +1,6 @@
 // Stocks TRADE:
 import { getWsClient } from "../transport";
-import * as WebSocket from "ws";
+import WebSocket from "isomorphic-ws";
 
 export interface ITradeStockEvent {
   ev: string; // Event Type

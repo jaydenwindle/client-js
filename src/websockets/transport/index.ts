@@ -1,4 +1,4 @@
-import * as WebSocket from "ws";
+import WebSocket from "isomorphic-ws";
 
 export const getWsClient = (url: string, apiKey: string): WebSocket => {
   if (!apiKey) {
