@@ -1,6 +1,11 @@
 export * from "./forex";
 export * from "./stocks";
 export * from "./crypto";
-import { IWebsocketClient } from "./index.d";
+import * as WebSocket from "ws";
+export interface IWebsocketClient {
+  crypto: () => WebSocket;
+  forex: () => WebSocket;
+  stocks: () => WebSocket;
+}
 export declare const websocketClient: (apiKey: string) => IWebsocketClient;
 export default websocketClient;
