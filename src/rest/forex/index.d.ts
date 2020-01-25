@@ -10,6 +10,18 @@ import {
 import { IAggregateQuery, IAggResponseFormatted } from "../stocks/aggregates";
 import { IForexSnapshotAllTickersResponseFormatted } from "./snapshots";
 
+export { ILastQuoteForCurrencyPair } from "./lastQuoteForCurrencyPair";
+export {
+  IHistoricForexTicksQuery,
+  IHistoricForexTicksFormatted
+} from "./historicForexTicks";
+export {
+  IRealTimeConversionQuery,
+  IRealTimeConversion
+} from "./realTimeCurrencyConversion";
+export { IAggregateQuery, IAggResponseFormatted } from "../stocks/aggregates";
+export { IForexSnapshotAllTickersResponseFormatted } from "./snapshots";
+
 export interface IForexClient {
   lastQuoteForCurrencyPair: (
     from: string,

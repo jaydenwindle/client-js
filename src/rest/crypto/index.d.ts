@@ -15,6 +15,23 @@ import {
   ICryptoDailyOpenCloseRaw
 } from "./ICryptoTickJson";
 
+export { ICryptoExchanges } from "./cryptoExchanges";
+export { ILastTradeForACryptoPair } from "./lastTradeForACryptoPair";
+export {
+  ICryptoSnapshotSingleTickerFormatted,
+  ICryptoSnapshotAllTickersFormatted,
+  ICryptoSingleTickerFullBookFormatted
+} from "./snapshots";
+export { IAggregateQuery, IAggResponseFormatted } from "../stocks/aggregates";
+export {
+  IHistoricCryptoTradeQuery,
+  IHistoricCryptoTradeFormatted
+} from "./historicCryptoTrades";
+export {
+  ICryptoDailyOpenCloseFormatted,
+  ICryptoDailyOpenCloseRaw
+} from "./ICryptoTickJson";
+
 export interface ICryptoClient {
   dailyOpenClose: (
     from: string,

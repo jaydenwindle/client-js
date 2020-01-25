@@ -26,6 +26,34 @@ import {
 } from "./snapshots";
 import { IAggregateQuery, IAggResponseFormatted } from "./aggregates";
 
+export { IConditionMappings } from "./conditionMappings";
+export { IDailyOpenClose } from "./dailyOpenClose";
+export { IExchangeFormatted } from "./exchanges";
+export { ILastQuoteResult } from "./lastQuoteForSymbol";
+export { ILastTradeResult } from "./lastTradeForSymbol";
+export {
+  IV1HistoricQuotesQuery,
+  IV1HistoricQuotesResultFormatted
+} from "./v1HistoricQuotes";
+export {
+  IV1HistoricTradesQuery,
+  IV1HistoricTradesResultFormatted
+} from "./v1HistoricTrades";
+export {
+  IV2HistoricQuotesQuery,
+  IV2HistoricQuotesResultFormatted
+} from "./v2HistoricQuotes";
+export {
+  IV2HistoricTradesQuery,
+  IV2HistoricTradesResultFormatted
+} from "./v2HistoricTrades";
+export {
+  ISnapshotAllTickersResultFormatted,
+  ISnapshotSingleTickerResultFormatted,
+  ISnapshotGainersLosersResultFormatted
+} from "./snapshots";
+export { IAggregateQuery, IAggResponseFormatted } from "./aggregates";
+
 export interface IStocksClient {
   conditionMappings: (ticktype: string) => Promise<IConditionMappings>;
   dailyOpenClose: (symbol: string, date: string) => Promise<IDailyOpenClose>;
