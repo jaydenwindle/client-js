@@ -1,7 +1,10 @@
 import { auth } from "../transport/request";
 import { cryptoDailyOpenClose } from "./dailyOpenClose";
-import { cryptoExchanges } from "./cryptoExchanges";
-import { lastTradeForCryptoPair } from "./lastTradeForACryptoPair";
+import { cryptoExchanges, ICryptoExchanges } from "./cryptoExchanges";
+import {
+  lastTradeForCryptoPair,
+  ILastTradeForACryptoPair
+} from "./lastTradeForACryptoPair";
 import {
   cryptoSnapshotAllTickers,
   cryptoSnapshotGainersLosers,
@@ -13,9 +16,21 @@ import {
   cryptoGroupedDaily,
   cryptoPreviousClose
 } from "./aggregates";
-import { historicCryptoTrades } from "./historicCryptoTrades";
+import {
+  historicCryptoTrades,
+  IHistoricCryptoTradeQuery,
+  IHistoricCryptoTradeFormatted
+} from "./historicCryptoTrades";
 
-export const cryptoClient = apiKey => ({
+import {
+  formatICryptoTickJsonRaw,
+  ICryptoDailyOpenCloseFormatted,
+  ICryptoDailyOpenCloseRaw
+} from "./ICryptoTickJson";
+
+import { ICryptoClient } from "./index.d";
+
+export const cryptoClient = (apiKey): ICryptoClient => ({
   dailyOpenClose: auth(apiKey, cryptoDailyOpenClose),
   exchanges: auth(apiKey, cryptoExchanges),
   lastTradeForPair: auth(apiKey, lastTradeForCryptoPair),

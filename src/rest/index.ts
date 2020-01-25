@@ -10,7 +10,9 @@ export * from "./stocks";
 import { referenceClient } from "./reference";
 export * from "./reference";
 
-export const restClient = apiKey => ({
+import { IRestClient } from "./index.d";
+
+export const restClient = (apiKey): IRestClient => ({
   crypto: cryptoClient(apiKey),
   forex: forexClient(apiKey),
   stocks: stocksClient(apiKey),

@@ -13,7 +13,9 @@ import {
 } from "./snapshots";
 import { realTimeCurrencyConversion } from "./realTimeCurrencyConversion";
 
-export const forexClient = (apiKey: string) => ({
+import { IForexClient } from "./index.d";
+
+export const forexClient = (apiKey: string): IForexClient => ({
   lastQuoteForCurrencyPair: auth(apiKey, lastQuoteForCurrencyPair),
   historicTicks: auth(apiKey, historicForexTicks),
   realTimeCurrencyConversion: auth(apiKey, realTimeCurrencyConversion),
