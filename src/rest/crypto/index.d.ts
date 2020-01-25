@@ -15,6 +15,23 @@ import {
   ICryptoDailyOpenCloseRaw
 } from "./ICryptoTickJson";
 
+export { ICryptoExchanges } from "./cryptoExchanges";
+export { ILastTradeForACryptoPair } from "./lastTradeForACryptoPair";
+export {
+  ICryptoSnapshotSingleTickerFormatted,
+  ICryptoSnapshotAllTickersFormatted,
+  ICryptoSingleTickerFullBookFormatted
+} from "./snapshots";
+export { IAggregateQuery, IAggResponseFormatted } from "../stocks/aggregates";
+export {
+  IHistoricCryptoTradeQuery,
+  IHistoricCryptoTradeFormatted
+} from "./historicCryptoTrades";
+export {
+  ICryptoDailyOpenCloseFormatted,
+  ICryptoDailyOpenCloseRaw
+} from "./ICryptoTickJson";
+
 export interface ICryptoClient {
   dailyOpenClose: (
     from: string,
@@ -30,14 +47,14 @@ export interface ICryptoClient {
     from: string,
     to: string,
     date: string,
-    query: IHistoricCryptoTradeQuery
+    query?: IHistoricCryptoTradeQuery
   ) => Promise<IHistoricCryptoTradeFormatted>;
   snapshotSingleTicker: (
     ticker: string
   ) => Promise<ICryptoSnapshotSingleTickerFormatted>;
   snapshotAllTickers: () => Promise<ICryptoSnapshotAllTickersFormatted>;
   snapshotGainersLosers: (
-    direction: string
+    direction?: string
   ) => Promise<ICryptoSnapshotAllTickersFormatted>;
   snapshotSingleTickerFullBook: (
     ticker: string
