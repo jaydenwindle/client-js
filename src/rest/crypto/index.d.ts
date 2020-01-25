@@ -10,7 +10,6 @@ import {
   IHistoricCryptoTradeQuery,
   IHistoricCryptoTradeFormatted
 } from "./historicCryptoTrades";
-
 import {
   ICryptoDailyOpenCloseFormatted,
   ICryptoDailyOpenCloseRaw
