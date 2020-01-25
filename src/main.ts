@@ -7,12 +7,12 @@ import websocketClient from "./websockets";
 import { IRestClient } from "./rest/index.d";
 import { IWebsocketClient } from "./websockets/index.d";
 
-export * from "./rest/crypto/index.d";
+export * from "./rest/crypto";
 export * from "./rest/forex/index.d";
 export * from "./rest/stocks/index.d";
 export * from "./rest/reference/index.d";
 
-export { IRestClient } from "./rest/index.d";
+export { IRestClient } from "./rest";
 export { ICryptoClient } from "./rest/crypto/index.d";
 export { IForexClient } from "./rest/forex/index.d";
 export { IStocksClient } from "./rest/stocks/index.d";
