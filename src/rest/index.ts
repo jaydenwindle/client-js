@@ -1,17 +1,11 @@
 import { cryptoClient, ICryptoClient } from "./crypto";
-export * from "./crypto";
-
 import { forexClient, IForexClient } from "./forex";
+import { referenceClient, IReferenceClient } from "./reference";
+import { stocksClient, IStocksClient } from "./stocks";
+export * from "./crypto";
 export * from "./forex";
-
-import { stocksClient } from "./stocks";
-export * from "./stocks";
-
-import { referenceClient } from "./reference";
 export * from "./reference";
-
-import { IStocksClient } from "./stocks/index.d";
-import { IReferenceClient } from "./reference/index.d";
+export * from "./stocks";
 
 export interface IRestClient {
   crypto: ICryptoClient;

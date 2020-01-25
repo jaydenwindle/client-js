@@ -1,24 +1,12 @@
 export * from "./rest";
+export * from "./rest/crypto";
+export * from "./rest/forex";
+export * from "./rest/reference";
+export * from "./rest/stocks";
 export * from "./websockets";
 
 import restClient, { IRestClient } from "./rest";
-import websocketClient from "./websockets";
-
-import { IWebsocketClient } from "./websockets/index.d";
-
-export * from "./rest/crypto";
-export * from "./rest/forex";
-export * from "./rest/stocks/index.d";
-export * from "./rest/reference/index.d";
-
-export { IRestClient } from "./rest";
-export { IStocksClient } from "./rest/stocks/index.d";
-export { IReferenceClient } from "./rest/reference/index.d";
-export { IWebsocketClient } from "./websockets/index.d";
-export {
-  IAggResponseFormatted,
-  IAggregateQuery
-} from "./rest/stocks/aggregates";
+import websocketClient, { IWebsocketClient } from "./websockets";
 
 export interface IPolygonClient {
   rest: IRestClient;
