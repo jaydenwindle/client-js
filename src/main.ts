@@ -1,8 +1,4 @@
 export * from "./rest";
-export * from "./rest/crypto";
-export * from "./rest/forex";
-export * from "./rest/reference";
-export * from "./rest/stocks";
 export * from "./websockets";
 
 import restClient, { IRestClient } from "./rest";
