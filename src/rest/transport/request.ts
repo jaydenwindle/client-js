@@ -29,5 +29,10 @@ export const get = async (
 
   const response = await fetch(url);
 
+  if (response.status >= 400) {
+    const message = await response.text();
+    throw new Error(message);
+  }
+
   return response.json();
 };
