@@ -7,12 +7,13 @@ import websocketClient from "./websockets";
 import { IRestClient } from "./rest/index.d";
 import { IWebsocketClient } from "./websockets/index.d";
 
-export * from "./rest/index.d";
 export * from "./rest/crypto/index.d";
 export * from "./rest/forex/index.d";
 export * from "./rest/stocks/index.d";
 export * from "./rest/reference/index.d";
-export * from "./websockets/index.d";
+
+export { IRestClient } from "./rest/index.d";
+export { IWebsocketClient } from "./websockets/index.d";
 export {
   IAggResponseFormatted,
   IAggregateQuery
