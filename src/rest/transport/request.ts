@@ -2,7 +2,7 @@ import fetch from "cross-fetch";
 import * as querystring from "querystring";
 
 export interface IPolygonQuery {
-  [key: string]: string | number | boolean;
+  [key: string]: string | number | boolean | undefined;
 }
 
 export interface IPolygonQueryWithCredentials extends IPolygonQuery {
