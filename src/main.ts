@@ -4,7 +4,9 @@ export * from "./websockets";
 import restClient from "./rest";
 import websocketClient from "./websockets";
 
-export const polygonClient = (apiKey: string) => ({
+import { IPolygonClient } from "./main.d";
+
+export const polygonClient = (apiKey: string): IPolygonClient => ({
   rest: restClient(apiKey),
   websockets: websocketClient(apiKey)
 });

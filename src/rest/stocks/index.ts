@@ -20,7 +20,9 @@ import { v1HistoricTrades } from "./v1HistoricTrades";
 import { v2HistoricQuotes } from "./v2HistoricQuotes";
 import { v2HistoricTrades } from "./v2HistoricTrades";
 
-export const stocksClient = (apiKey: string) => ({
+import { IStocksClient } from "./index.d";
+
+export const stocksClient = (apiKey: string): IStocksClient => ({
   conditionMappings: auth(apiKey, conditionMappings),
   dailyOpenClose: auth(apiKey, dailyOpenClose),
   exchanges: auth(apiKey, exchanges),

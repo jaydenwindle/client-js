@@ -11,7 +11,9 @@ import { tickerNews } from "./tickerNews";
 import { tickers } from "./tickers";
 import { tickerTypes } from "./tickerTypes";
 
-export const referenceClient = apiKey => ({
+import { IReferenceClient } from "./index.d";
+
+export const referenceClient = (apiKey: string): IReferenceClient => ({
   locales: auth(apiKey, locales),
   markets: auth(apiKey, markets),
   marketHolydays: auth(apiKey, marketHolydays),

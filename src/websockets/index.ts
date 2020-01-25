@@ -8,7 +8,9 @@ export * from "./forex";
 export * from "./stocks";
 export * from "./crypto";
 
-export const websocketClient = (apiKey: string) => ({
+import { IWebsocketClient } from "./index.d";
+
+export const websocketClient = (apiKey: string): IWebsocketClient => ({
   crypto: auth(apiKey, getCryptoWebsocket),
   forex: auth(apiKey, getForexWebsocket),
   stocks: auth(apiKey, getStocksWebsocket)
