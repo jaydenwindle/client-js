@@ -60,7 +60,7 @@ export const formatIAggResponseRaw = (
   raw: IAggResponseRaw
 ): IAggResponseFormatted => ({
   ...raw,
-  results: raw.results ? raw.results.map(formatIAggv2Raw) : []
+  results: raw.results.map(formatIAggv2Raw)
 });
 
 export interface IAggregateQuery extends IPolygonQuery {
