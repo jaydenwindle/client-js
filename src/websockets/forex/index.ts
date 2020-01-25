@@ -1,6 +1,6 @@
 // Forex QUOTE:
 import { getWsClient } from "../transport";
-import * as WebSocket from "ws";
+import WebSocket from "isomorphic-ws";
 
 export interface IQuoteForexEvent {
   ev: string; // Event Type

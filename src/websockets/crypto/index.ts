@@ -1,5 +1,5 @@
 // Crypto QUOTE:
-import * as WebSocket from "ws";
+import WebSocket from "isomorphic-ws";
 import { getWsClient } from "../transport";
 
 export interface IQuoteCryptoEvent {
